@@ -1,0 +1,109 @@
+<div class="wrapper">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
+
+        <div *ngIf="doctors.length === 0">
+          List is empty!
+        </div>
+        <table class="table manage-candidates-top mb-0" *ngIf="doctors.length !== 0">
+          <thead>
+            <tr>
+              <th>Doctor Name</th>
+              <th class="action text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="candidates-list" *ngFor="let doctor of doctors">
+              <td class="title">
+                <div class="thumb">
+                  <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                </div>
+                <div class="candidate-list-details">
+                  <div class="candidate-list-info">
+                    <div class="candidate-list-title">
+                      <h5 class="mb-0"><a href="">{{ doctor.title }} {{ doctor.name }} {{doctor.surname}}</a></h5>
+                    </div>
+                    <div class="candidate-list-option">
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-heart-pulse-fill"></i>{{ doctor.specialization }}</li>
+                        <li><i class="bi bi-telephone-fill"></i>{{ doctor.phoneNumber }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <ul class="list-unstyled mb-0 d-flex justify-content-end">
+                  <li data-toggle="modal" data-target="#detailsModal" (click)="initForm(doctor)">
+                    <a class="text-info"><i class="bi bi-pencil-fill"></i></a>
+                  </li>
+                  <li (click)="delete(doctor.id)"><a class="text-danger"><i class="bi bi-trash"></i></a></li>
+                </ul>
+              </td>
+              <!-- Modal -->
+              <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <form [formGroup]="editForm" (submit)="update()">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{ doctor.title }} {{ doctor.name }}
+                          {{doctor.surname}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+
+                        <div class="form-group">
+                          <div class="form-row">
+                            <div class="col">
+                              <input type="text" class="form-control" formControlName="title" placeholder="Title">
+                            </div>
+                            <div class="col">
+                              <input type="text" class="form-control" formControlName="specialization"
+                                placeholder="Specialization">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-row">
+                            <div class="col">
+                              <input type="text" class="form-control" formControlName="name" placeholder="Name">
+                            </div>
+                            <div class="col">
+                              <input type="text" class="form-control" formControlName="surname" placeholder="Surname">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-row">
+                            <div class="col">
+                              <input type="text" class="form-control" formControlName="phoneNumber"
+                                placeholder="Phone Number">
+                            </div>
+                            <div class="col">
+                              <input type="date" class="form-control" formControlName="dateOfBirth"
+                                placeholder="Date of birth">
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button id="closeModalButton" type="button" class="btn btn-secondary"
+                          data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-warning">Update</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

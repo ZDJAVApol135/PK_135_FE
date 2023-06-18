@@ -1,0 +1,35 @@
+<div class="wrapper">
+
+
+    <h1>Login</h1>
+
+    <div class="form-wrapper">
+
+        <h3>Login Details</h3>
+
+        <form [formGroup]="loginForm" (submit)="onSubmit()">
+
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="username" placeholder="Username">
+                </div>
+                <div class="mb-1 agile-text-width">
+                    <input type="password" formControlName="password" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="signup-msg">
+                <p>Don’t have an account? <a routerLink="/signup">Sign Up</a></p>
+            </div>
+
+
+            <div>
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+
+    </div>
+
+    <app-footer></app-footer>
+
+</div>

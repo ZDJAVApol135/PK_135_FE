@@ -1,0 +1,268 @@
+.signup-msg {
+    font-size: 13px;
+    margin-top: 40px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.signup-msg a {
+    color: #23b4cc;
+    text-decoration: none;
+}
+
+.signup-msg a:hover {
+    text-decoration: underline;
+}
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 4vw;
+    padding: 4vw 0vw 3vw;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #fff;
+    text-shadow: 3px 3px 3px #1d1d1d;
+    letter-spacing: 5px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #23b4cc;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    padding: 0.4vw;
+    padding: 7px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.86);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: url(../../assets/banner.jpg) no-repeat center top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+.form-wrapper {
+    padding: 3vw;
+    background: rgba(0, 0, 0, 0.78);
+    max-width: 650px;
+    min-height: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.form-wrapper ::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.form-wrapper :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+}
+
+.form-wrapper ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+}
+
+.form-wrapper :-ms-input-placeholder {
+    color: #fff;
+}
+
+.form-wrapper label {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.83);
+    letter-spacing: 2px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+
+.form-wrapper input[type="text"],
+.form-wrapper input[type="password"] {
+    width: 100%;
+    font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    padding: 10px 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.form-wrapper input[type="submit"] {
+    position: relative;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 0.5em;
+    border: none;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.2em;
+    float: left;
+    margin-top: 30px;
+    outline: none;
+    letter-spacing: 1px;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.form-wrapper input[type="submit"] {
+    background: #6a9e2b;
+}
+
+.form-wrapper input[type="submit"]:hover {
+    background: #82bb3b;
+    color: #fff;
+}
+
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+
+/* =================== RESPONSIVE LAYOUT =================== */
+/* ========================================================= */
+
+@media(max-width:1366px) {
+    h1 {
+        font-size: 4.5vw;
+    }
+}
+
+@media(max-width:1024px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    .form-wrapper {
+        padding: 4vw;
+    }
+}
+
+@media(max-width:900px) {
+    h1 {
+        font-size: 6.3vw;
+        padding: 5vw 0vw 3vw;
+    }
+
+ 
+}
+
+@media(max-width:768px) {
+    h1 {
+        font-size: 6.8vw;
+        padding: 8vw 0vw 4vw;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 23px;
+    }
+
+    .form-wrapper {
+        margin: 0 7vw;
+    }
+}
+
+@media(max-width:640px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    h3 {
+        font-size: 21px;
+        letter-spacing: 1.5px;
+    }
+
+    .form-wrapper {
+        padding: 5vw;
+        min-height: 380px;
+    }
+}
+
+@media(max-width:568px) {
+    h3 {
+        font-size: 20px;
+    }
+
+    .form-wrapper {
+        margin: 0px 5vw;
+        padding: 6vw;
+    }
+
+    .form-wrapper input[type="text"],
+    .form-wrapper input[type="password"] {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:480px) {
+    h1 {
+        font-size: 8vw;
+        padding: 10vw 3vw 6vw;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .form-wrapper input[type="submit"] {
+        width: 100%;
+        font-size: 1.05em;
+        margin-top: .8em;
+        float: none;
+    }
+}
+
+@media(max-width:414px) {
+    h1 {
+        font-size: 11vw;
+        letter-spacing: 3px;
+    }
+}
+
+@media(max-width:320px) {
+
+    h1 {
+        font-size: 12vw;
+        letter-spacing: 1px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .form-wrapper {
+        margin: 0px 3vw;
+    }
+}

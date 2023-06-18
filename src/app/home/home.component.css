@@ -1,0 +1,14 @@
+.wrapper {
+    min-height: 100vh;
+    background: url(../../assets/main-bg.png) no-repeat center top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+.content {
+    margin-top: 150px;
+}

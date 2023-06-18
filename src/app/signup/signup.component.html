@@ -1,0 +1,122 @@
+<div class="wrapper">
+
+
+    <h1>Signup</h1>
+
+    <div class="form-wrapper">
+
+        <h3>Personal Details</h3>
+        <div class="radio-section">
+            <h6>Register as</h6>
+            <ul class="radio-buttons-agileits">
+                <li>
+                    <input type="radio" id="a-option" [checked]="isPatient" (click)="toggleIsPatient()">
+                    <label for="a-option">Patient</label>
+                </li>
+                <li>
+                    <input type="radio" id="b-option" [checked]="!isPatient" (click)="toggleIsPatient()">
+                    <label for="b-option">Doctor</label>
+                </li>
+            </ul>
+        </div>
+
+
+        <form [formGroup]="doctorForm" (submit)="onSubmit()" *ngIf="!isPatient">
+
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="title" placeholder="Title">
+                </div>
+            </div>
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="username" placeholder="Username">
+                </div>
+                <div class="mb-1 agile-text-width">
+                    <input type="password" formControlName="password" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="name" placeholder="First Name">
+                </div>
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="surname" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="email" formControlName="email" placeholder="Email">
+                </div>
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="phoneNumber" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="specialization" placeholder="Specialization">
+                </div>
+                <div class="mb-1 agile-text-width">
+                    <input id="datepicker" type="date" formControlName="dateOfBirth" placeholder="Date of birth"
+                        class="hasDatepicker">
+                </div>
+            </div>
+
+            <div>
+                <input type="submit" value="Submit" />
+            </div>
+            <div>
+                <input type="reset" value="Clear Form" />
+            </div>
+
+        </form>
+
+        <form [formGroup]="patientForm" (submit)="onSubmit()" *ngIf="isPatient">
+
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="username" placeholder="Username">
+                </div>
+                <div class="mb-1 agile-text-width">
+                    <input type="password" formControlName="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="name" placeholder="First Name">
+                </div>
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="surname" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="email" formControlName="email" placeholder="Email">
+                </div>
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="phoneNumber" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="main-flex-sectns">
+                <div class="mb-1 agile-text-width">
+                    <input type="text" formControlName="pesel" placeholder="Pesel">
+                </div>
+                <div class="mb-1 agile-text-width">
+                    <input id="datepicker" type="date" formControlName="dateOfBirth" placeholder="Date of birth"
+                        class="hasDatepicker">
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Submit" />
+            </div>
+            <div>
+                <input type="reset" value="Clear Form" />
+            </div>
+        </form>
+
+    </div>
+
+    <app-footer></app-footer>
+
+</div>
